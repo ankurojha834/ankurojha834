@@ -26,26 +26,6 @@ ankur = {
 
 ---
 
-## ⚡ Live Neural Network — My AI Brain
-
-<!-- 
-  OPTION A (Recommended): Host neural-animation.html on your GitHub Pages
-  1. Enable GitHub Pages on this repo (Settings → Pages → Deploy from branch → main → /root)
-  2. Put neural-animation.html in the repo root
-  3. Replace YOUR_USERNAME below with: ankurojha834
-
-  Then use this iframe (works on portfolio sites, not native GitHub README):
--->
-
-> 🔗 **[→ Watch the live neural animation here](https://ankurojha834.github.io/ankurojha834/neural-animation.html)**
-
-<!--
-  OPTION B: Use this animated SVG directly in the README (no hosting needed)
-  Just swap the snake line at the bottom with the gifcity/Platane action below.
--->
-
----
-
 ## 🚀 Tech Stack
 
 <div align="center">
@@ -133,34 +113,6 @@ ankur = {
 
 <div align="center">
 
-<!-- 🔥 KILLER ALTERNATIVE TO SNAKE — Neural Pulse Animation -->
-<!-- Replace the old snake img tag with this GitHub Action setup (instructions below) -->
-
-<!-- 
-  ══════════════════════════════════════════════════════
-  HOW TO REPLACE THE SNAKE WITH THE NEURAL ANIMATION:
-
-  STEP 1 — Add the HTML file to your profile repo:
-    - Put neural-animation.html in your ankurojha834/ankurojha834 repo
-    - Enable GitHub Pages: Settings → Pages → Branch: main → / (root) → Save
-
-  STEP 2 — Add this line to your README (replacing the snake img):
-    <img src="https://ankurojha834.github.io/ankurojha834/neural-animation.html" .../>
-    NOTE: GitHub blocks iframes/HTML in README — use the link approach below instead.
-
-  STEP 3 — Best approach for README (GitHub-safe animated GIF via gifski):
-    Use this GitHub Action to auto-generate a contribution animation:
-    → https://github.com/marketplace/actions/generate-snake-game-from-github-contribution-grid
-
-    OR use Platane's action which supports custom themes:
-    → Create .github/workflows/generate-animation.yml with custom color palette
-
-  STEP 4 — For your PORTFOLIO SITE (portfolio-red-five-97.vercel.app):
-    Just embed the HTML directly as an <iframe> — it will look stunning.
-  ══════════════════════════════════════════════════════
--->
-
-<!-- INTERIM: Styled contribution snake with your color palette (works RIGHT NOW) -->
 <img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg" alt="Snake animation" width="100%"/>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" width="100%"/>
@@ -168,45 +120,3 @@ ankur = {
 *"The best model is the one you **ship**." 🚀*
 
 </div>
-
----
-
-<!-- 
-  ════════════════════════════════════════════════════════════
-  GITHUB ACTION: .github/workflows/neural-animation.yml
-  Create this file in your repo to auto-deploy the animation:
-  ════════════════════════════════════════════════════════════
-
-  name: Deploy Neural Animation
-  on:
-    schedule:
-      - cron: "0 0 * * *"
-    workflow_dispatch:
-    push:
-      branches: [main]
-  
-  permissions:
-    contents: write
-  
-  jobs:
-    deploy:
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v3
-        - name: Copy animation to output
-          run: cp neural-animation.html docs/index.html
-        - uses: Platane/snk@v3
-          with:
-            github_user_name: ankurojha834
-            outputs: |
-              docs/github-contribution-grid-snake.svg
-              docs/github-contribution-grid-snake-dark.svg?palette=github-dark
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        - uses: crazy-max/ghaction-github-pages@v3
-          with:
-            target_branch: gh-pages
-            build_dir: docs
-          env:
-            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
--->
